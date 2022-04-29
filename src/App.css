@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+.App {
+  height: 100%;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  margin:0;
+  background: #1f3756;
+  background: radial-gradient(circle, hsla(214, 47%, 23%, 1) 0%, hsla(238, 48%, 15%, 1) 100%);
+}
+
+.headingCon{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width:40%;
+  border : 3px solid rgb(96, 110, 133);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heading{
+  color: rgba(255, 255, 255, 0.966);
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+
+}
+.score{
+  width: 30%;
+  border-radius: 10px;
+  background-color:rgba(255, 255, 255, 0.966);
+  padding: 8px;
+  color:#2a46c0;
+  letter-spacing: 1px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selCon{
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 80px;
+  width:45%;
+  height: 350px;
+
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:25px;
+
+  /* border : 2px solid yellowgreen */
+}
+
+.icon{
+  width:140px;
+  height:140px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.rock, .paper,.scissors{
+  width:160px;
+  height:160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  border:none;
+}
+.rock:hover, .paper:hover ,.scissors:hover  {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+.rock{
+  background: linear-gradient(90deg, hsla(349, 71%, 52%, 1) 0%, hsla(349, 71%, 56%, 1) 100%);
+}
+
+.paper {
+  background: linear-gradient(90deg, hsla(230, 89%, 62%, 1) 0%, hsla(230, 89%, 65%, 1) 100%);
+}
+
+.scissors {
+  background: linear-gradient(90deg, hsla(39, 89%, 49%, 1) 0%, hsla(40, 84%, 53%, 1) 100%);
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 80px;
+  width:45%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 350px;
+  /* border : 2px solid yellowgreen */
+
+
+}
+.gameCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.userSelection, .homeSelection {
+  width:140px;
+  height:140px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.966);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.game span {
+  font-size: 22px;
+}
+
+.resultCon{
+  align-self: center;
+  font-size: 35px;
+}
+
+.resultCon button{
+  font-size: 15px;
+  background-color: white;
+  letter-spacing: 1px;
+  border: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  width:150px;;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.footerCon{
+  /* display: flex;
+  justify-content: flex-end; */
+  align-self: flex-end;
+ width: 50%;
+}
+
+.footerCon button{
+  margin-right: 80px;
+  font-size: 15px;
+  background-color: transparent;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  width:120px;
+  border-radius: 5px;
+  height: 40px;
+  color:white;
+}
+
+.modal {
+  /* fixed position will always show modal in the top left corner */
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  /* z-index to show modal even if it is used before some other elements */
+  z-index: 5;
+  width: 450px;
+  height: 430px;
+  /* add some background to blur content behind modal */
+  background: white;
+  /* center content inside modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8A8FAC;
+  border-radius: 20px;
+}
+
+.modalHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px; 
+  font-size: 30px ;
+  letter-spacing: 1px;
+}
+.modalHeader button {
+  margin: 0;
+  width: auto;
+}
