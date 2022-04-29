@@ -10,15 +10,14 @@ function Footer() {
     <div className='footerCon'>
       <button onClick = {() => setShowModal(true)}> RULES </button>
       <div className='modal' style = {{ display : showModal ? 'block' :'none' }}>
-        <div className='modalHeader'>
-          <div>RULES</div>
-          <button onClick = { () => setShowModal(false)}><Icon icon="ci:close-small" color="#e1e3ed"  width="30" /></button>
+          <div className='modalHeader'>
+            <div>RULES</div>
+            <button onClick = { () => setShowModal(false)}><Icon icon="ci:close-small" color="#e1e3ed"  width="30" /></button>
+          </div>
+          <div className='rulesImg'>
+            <img src={rules} alt= 'rules' />
+          </div>
         </div>
-        <div className='rulesImg'>
-          <img src={rules} alt= 'rules' />
-        </div>
-        
-      </div>
     </div>
   )
 }

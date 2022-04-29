@@ -20,14 +20,15 @@ body {
   margin-left:auto;
   margin-right:auto;
   margin-top: 50px;
-  margin-bottom: 80px;
-  width:40%;
+  margin-bottom: 30px;
+  width:50%;
   border : 3px solid rgb(96, 110, 133);
   border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .heading{
@@ -40,7 +41,7 @@ body {
 
 }
 .score{
-  width: 30%;
+  width: 25%;
   border-radius: 10px;
   background-color:rgba(255, 255, 255, 0.966);
   padding: 8px;
@@ -55,7 +56,7 @@ body {
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 80px;
-  width:45%;
+  width:60%;
   height: 350px;
 
   display: flex;
@@ -64,9 +65,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  gap:25px;
-
+  gap:30px;
   /* border : 2px solid yellowgreen */
+
 }
 
 .icon{
@@ -94,6 +95,12 @@ body {
   margin-right: 60px;
   margin-top: 20px;
   border:none;
+}
+.rock, .scissors {
+  align-self: flex-start;
+}
+.paper {
+  align-self: flex-end;
 }
 .rock:hover, .paper:hover ,.scissors:hover  {
   transform: translateY(-5px);
@@ -184,22 +191,21 @@ body {
 
 .modal {
   /* fixed position will always show modal in the top left corner */
-  position: fixed;
-  top: 30%;
-  left: 35%;
-  /* z-index to show modal even if it is used before some other elements */
-  z-index: 5;
-  width: 450px;
-  height: 430px;
-  /* add some background to blur content behind modal */
-  background: white;
-  /* center content inside modal */
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: white;
+  height: 500px;
   color: #8A8FAC;
   border-radius: 20px;
+  /* z-index: 5; */
+  transform: translate(-50%, -50%);
 }
+
+
 
 .modalHeader{
   display: flex;
@@ -213,3 +219,90 @@ body {
   margin: 0;
   width: auto;
 }
+
+@media only screen and (max-width: 982px)  {
+  .headingCon{
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .heading{
+    font-size: 25px;
+  }
+  .score{
+    font-size: 15px;
+  }
+  .selCon{
+    margin:auto;
+    width:90%;
+    height: 300px;
+    gap: 20px;
+  }
+  
+  .icon{
+    width:100px;
+    height:100px;
+  }
+  
+  .rock, .paper,.scissors{
+    width:120px;
+    height:120px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .game {
+    /* border: 1px solid salmon; */
+    width:80%;
+    height: 300px;
+    align-self: center;
+    margin-top: 0;
+  }
+ 
+  .userSelection, .homeSelection {
+    width:100px;
+    height:100px;
+  }
+  
+  .game span {
+    font-size: 18px;
+  }
+  
+  .resultCon{
+    font-size: 25px;
+    align-self: flex-end;
+  }
+  
+  .resultCon button{
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 12px;
+    width:100px;
+    height: 30px;
+  }
+  
+  .footerCon{
+    align-self: center;
+    width: 90%;
+    margin-top: 0px;
+  }
+  
+  .footerCon button{
+    margin: 0;
+  }
+  
+  .modal {
+  
+    width: 350px;
+    height: 450px;
+  }
+  
+  .modalHeader{
+    font-size: 20px ;
+  }
+
+  .modal img{
+    width: 100%;
+  }
+}
+
+
